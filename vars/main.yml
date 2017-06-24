@@ -12,6 +12,12 @@ rexray_log_level: warn
 # one of ec2 | gce | isilon | openstack | rackspace | scaleio | virtualbox | vmax | xtremio
 rexray_storage_drivers: []
 
+# set this to true if you are considering or allowing mounts to detach volumes
+# read more here ->
+# https://github.com/codedellemc/labs/tree/master/setup-virtualbox-dockermachine,
+# and
+# http://libstorage.readthedocs.io/en/stable/user-guide/config/#volume-configuration
+rexray_integration_preempt: false
 # AWS EC2 Storage Driver
 #rexray_aws_accesskey: ''
 #rexray_aws_secretkey: ''

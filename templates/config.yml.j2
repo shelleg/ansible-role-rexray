@@ -3,6 +3,13 @@ rexray:
   logLevel: {{ rexray_log_level }}
 libstorage:
   service: {{ rexray_storage_drivers[0] }}
+{% if rexray_integration_preempt %}
+  integration:
+    volume:
+      operations:
+        mount:
+          preempt: true
+{% endif %}
   server:
     services:
 {% for driver in rexray_storage_drivers %}

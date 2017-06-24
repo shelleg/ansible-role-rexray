@@ -45,6 +45,13 @@ Each storage driver has driver-specific variables that can be set.  Some are
 required, some are optional. Details for each driver can be found in the User
 Guide [Provider List](http://rexray.readthedocs.io/en/stable/user-guide/storage-providers/).
 
+
+```yaml
+rexray_integration_preempt: false
+```
+There is a capability to preemptively detach any existing attachments to other instances before attempting a mount. This will enable use cases for availability where another instance must be able to take control of a volume without the current owner instance being involved. The operation is considered equivalent to a power off of the existing instance for the device.
+[Read more](http://libstorage.readthedocs.io/en/stable/user-guide/config/#volume-configuration)
+
 **AWS**
 
 ```yaml
